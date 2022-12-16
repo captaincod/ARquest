@@ -25,20 +25,26 @@
       </div>
     </div>
 
-    <form id="TextBoxesGroup" method = "post" enctype="multipart/form-data" class="form-group" action="/get_quest" name="form">
+<!--    <div class="alert alert-dismissible alert-danger">-->
+<!--        {{errors}}-->
+<!--    </div>-->
+    <span class="badge badge-danger">{{errors}}</span>
+
+    <form id="TextBoxesGroup" method = "post" enctype="multipart/form-data" class="form-group" name="form" action="/get_quest">
         <legend>Точки квеста</legend>
         <fieldset id="fieldset">
             <div class="lat form-group row">
                 <label class="col-sm-2 col-form-label">Широта (Latitude)</label>
-                <input type="text" name="lat" class="form-control col-sm-3" placeholder="Поле"/>
+                <input type="text" name="lat0" class="form-control col-sm-3 item-required" placeholder="Пример: 52.250847"/>
             </div>
             <div class="lon form-group row">
                 <label class="col-sm-2 col-form-label">Долгота (Longitude)</label>
-                <input type="text" name="lon" class="form-control col-sm-3" placeholder="Поле"/>
+                <input type="text" name="lon0" class="form-control col-sm-3 item-required" placeholder="Пример: 104.260122"/>
             </div>
             <div class="file form-group">
-                <label class="col-form-label">Выберите изображение для точки</label>
-                <input type="file" name="file" class="form-control-file" aria-describedby="fileHelp"/>
+                <label class="col-form-label" aria-describedby="fileHelp">Выберите изображение для точки</label>
+                <small id="fileHelp" class="form-text text-muted">Допустимые форматы: .jpg, .png, .gif до 15МБ</small>
+                <input type="file" name="file0" class="form-control-file item-required"/>
             </div>
         </fieldset>
         <div class="btn-group" role="group">

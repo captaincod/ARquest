@@ -12,11 +12,7 @@
             embedded
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;" >
-        <a-image
-                src="{{assets[0]}}"
-                look-at="[gps-camera]"
-                scale="1 1 1"
-                gps-entity-place="latitude: {{lats[0]}}; longitude: {{lons[0]}};"></a-image>
+            {{data}}
         <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
 </body>

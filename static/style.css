@@ -8,5 +8,11 @@
 
 .btn-success {
     margin-top: 20px;
-    width: 250px;
+    width: 413px;
+}
+
+.badge {
+    margin-left: 6%;
+    font-size: 16px;
+    margin-bottom: 10px;
 }

@@ -8,7 +8,6 @@ $(function () { // Short way for document ready.
         var newType = $(".lat").last().clone().addClass("newAdded"+counter); // Clone the group and add a new class.
         var newName = $(".lon").last().clone().addClass("newAdded"+counter);
         var newFile = $(".file").last().clone().addClass("newAdded"+counter);
-
         newType.appendTo("#fieldset"); // Append the new group.
         newName.appendTo("#fieldset");
         newFile.appendTo("#fieldset");
@@ -35,3 +34,21 @@ $(function () { // Short way for document ready.
         counter = counter - 1;
     });
 });
+
+function get_quest() {
+    $.ajax({
+        type: "POST",
+        url: "/get_quest",
+        data: $('form').serialize(),
+        success: function(response) {
+            var json = jQuery.parseJSON(response);
+            var errors = json.errors;
+            if (errors.length >= 1) {
+                console.log(errors);
+            };
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+}
