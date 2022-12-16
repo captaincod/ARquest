@@ -1,0 +1,12 @@
+#TextBoxesGroup {
+    margin-left: 6%;
+}
+
+.btn-group .btn {
+    margin-right: 5px;
+}
+
+.btn-success {
+    margin-top: 20px;
+    width: 250px;
+}
